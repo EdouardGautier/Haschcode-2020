@@ -1,38 +1,75 @@
-Backup/Version3/__init__.py
-Backup/Version3/Main.py
-Backup/Version3/Class/Librairie.py
-Backup/Version3/Class/Livre.py
-Backup/Version3/Class/__pycache__/Librairie.cpython-37.pyc
-Backup/Version3/Class/__pycache__/Librairie.cpython-38.pyc
-Backup/Version3/Class/__pycache__/Livre.cpython-37.pyc
-Backup/Version3/Class/__pycache__/Livre.cpython-38.pyc
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_A.txt
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_B.txt
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_C.txt
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_D.txt
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_E.txt
-Backup/Version3/FichierSortieConsole/Etat_Librairie_Fichier_F.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_A.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_B.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_C.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_D.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_E.txt
-Backup/Version3/FichierSortieConsole/Statistique_Fichier_F.txt
-Backup/Version3/Output/A_output.txt
-Backup/Version3/Output/B_output.txt
-Backup/Version3/Output/C_output.txt
-Backup/Version3/Output/D_output.txt
-Backup/Version3/Output/E_output.txt
-Backup/Version3/Output/F_output.txt
-Backup/Version3/ScriptsFichiers/Ecriture.py
-Backup/Version3/ScriptsFichiers/Lecture.py
-Backup/Version3/ScriptsFichiers/VerifDouble.py
-Backup/Version3/ScriptsFichiers/__pycache__/__init__.cpython-38.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/Ecriture.cpython-37.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/Ecriture.cpython-38.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/Lecture.cpython-37.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/Lecture.cpython-38.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/VerifDouble.cpython-37.pyc
-Backup/Version3/ScriptsFichiers/__pycache__/VerifDouble.cpython-38.pyc
-Backup/Version3/__pycache__/__init__.cpython-38.pyc
-Backup/HaschcodeV1.py
+Backup/Haschcode.py
+Backup/Version Pierre-louis/__init__.py
+Backup/Version Pierre-louis/Main.py
+Backup/Version Pierre-louis/Class/Librairie.py
+Backup/Version Pierre-louis/Class/Livre.py
+Backup/Version Pierre-louis/Class/__pycache__/Librairie.cpython-37.pyc
+Backup/Version Pierre-louis/Class/__pycache__/Librairie.cpython-38.pyc
+Backup/Version Pierre-louis/Class/__pycache__/Livre.cpython-37.pyc
+Backup/Version Pierre-louis/Class/__pycache__/Livre.cpython-38.pyc
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_A.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_B.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_C.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_D.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_E.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Etat_Librairie_Fichier_F.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_A.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_B.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_C.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_D.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_E.txt
+Backup/Version Pierre-louis/FichierSortieConsole/Statistique_Fichier_F.txt
+Backup/Version Pierre-louis/Output/A_output.txt
+Backup/Version Pierre-louis/Output/B_output.txt
+Backup/Version Pierre-louis/Output/C_output.txt
+Backup/Version Pierre-louis/Output/D_output.txt
+Backup/Version Pierre-louis/Output/E_output.txt
+Backup/Version Pierre-louis/Output/F_output.txt
+Backup/Version Pierre-louis/ScriptsFichiers/Ecriture.py
+Backup/Version Pierre-louis/ScriptsFichiers/Lecture.py
+Backup/Version Pierre-louis/ScriptsFichiers/VerifDouble.py
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/__init__.cpython-38.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/Ecriture.cpython-37.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/Ecriture.cpython-38.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/Lecture.cpython-37.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/Lecture.cpython-38.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/VerifDouble.cpython-37.pyc
+Backup/Version Pierre-louis/ScriptsFichiers/__pycache__/VerifDouble.cpython-38.pyc
+Backup/Version Pierre-louis/__pycache__/__init__.cpython-38.pyc
+Round Extended/Version Commune/CalculScore.py
+Round Extended/Version Commune/mario-mushroom.ogg
+Round Extended/Version Commune/Script.py
+Round Extended/Version Commune/Class/Book.py
+Round Extended/Version Commune/Class/Library.py
+Round Extended/Version Commune/Class/__pycache__/Book.cpython-38.pyc
+Round Extended/Version Commune/Class/__pycache__/Library.cpython-38.pyc
+Round Extended/Version Commune/Output/A_output.txt
+Round Extended/Version Commune/Output/B_output.txt
+Round Extended/Version Commune/Output/C_output.txt
+Round Extended/Version Commune/Output/D_output.txt
+Round Extended/Version Commune/Output/E_output.txt
+Round Extended/Version Commune/Output/F_output.txt
+Round Extended/Version Commune/Test/output_test.txt
+Round Extended/Version Commune/Test/output_testRef.txt
+Round Extended/Version Commune/Test/test_Script.py
+Round Extended/Version Commune/Test/__pycache__/test_Lib.cpython-38-pytest-5.3.5.pyc
+Round Extended/Version Commune/Test/__pycache__/test_Script.cpython-38-pytest-5.3.5.pyc
+Round Extended/Version Commune/__pycache__/CalculScore.cpython-38.pyc
+Round Extended/Version1/CalculScore.py
+Round Extended/Version1/mario-mushroom.ogg
+Round Extended/Version1/Script.py
+Round Extended/Version1/Class/Book.py
+Round Extended/Version1/Class/Library.py
+Round Extended/Version1/Class/__pycache__/Book.cpython-38.pyc
+Round Extended/Version1/Class/__pycache__/Library.cpython-38.pyc
+Round Extended/Version1/Output/A_output.txt
+Round Extended/Version1/Output/B_output.txt
+Round Extended/Version1/Output/C_output.txt
+Round Extended/Version1/Output/D_output.txt
+Round Extended/Version1/Output/E_output.txt
+Round Extended/Version1/Output/F_output.txt
+Round Extended/Version1/Test/output_test.txt
+Round Extended/Version1/Test/output_testRef.txt
+Round Extended/Version1/Test/test_Script.py
+Round Extended/Version1/Test/__pycache__/test_Lib.cpython-38-pytest-5.3.5.pyc
+Round Extended/Version1/Test/__pycache__/test_Script.cpython-38-pytest-5.3.5.pyc
