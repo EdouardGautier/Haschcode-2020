@@ -8,7 +8,7 @@
 
 Competition organised by Google in 2020. The objective is to answer a given problem, on the theme of data processing.
 The script is made in Python V3. No external library is needed.
-The results are calculated and displayed directly in the terminal. The files to be processed are [here](hashcode_2020_online_qualification_round.pdf).
+The results are calculated and displayed directly in the terminal. The files to be processed are [here](Output).
 
 ## [Issue 📘📕📗](hashcode_2020_online_qualification_round.pdf)
 Books allow us to discover fantasy worlds and better understand the world we live in.
