@@ -5,11 +5,12 @@
         <img src="https://github-readme-stats.vercel.app/api/pin/?username=EdouardGautier&repo=Haschcode-2020&theme=default_repocard&show_icons=true"/>
     </a>
 </p>
+
 Competition organised by Google in 2020. The objective is to answer a given problem, on the theme of data processing.
 The script is made in Python V3. No external library is needed.
-The results are calculated and displayed directly in the terminal. The files to be processed are [here](hashcode_2020_online_qualification_round.in).
+The results are calculated and displayed directly in the terminal. The files to be processed are [here](hashcode_2020_online_qualification_round.pdf).
 
-## [Issue 📘📕📗](hashcode_2020_online_qualification_round.in)
+## [Issue 📘📕📗](hashcode_2020_online_qualification_round.pdf)
 Books allow us to discover fantasy worlds and better understand the world we live in.
 They enable us to learn about everything from photography to compilers… and of course a good book is a great way to relax!
 
@@ -28,7 +29,7 @@ Note that if the same book is shipped from multiple libraries, the solution will
 
 ## Solution 🔨
 ### Principle 📘
-It is important to have read [the instructions for the competition](hashcode_2020_online_qualification_round.in) beforehand, to understand the rest.
+It is important to have read [the instructions for the competition](hashcode_2020_online_qualification_round.pdf) beforehand, to understand the rest.
 
 The ratio of library, number of days borrowed / total book score, is calculated. This allows us to sort them.
 
