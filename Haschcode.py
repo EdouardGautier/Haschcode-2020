@@ -15,159 +15,217 @@ liste_fichier = [fichier_1, fichier_2,
 
 
 class Read():
-
+    """
+    Class permettant la lecture des fichiers
+    """    
     def __init__(self, fichier):
+        """
+        Initialisation de la classe
+
+        Args:
+            fichier (ficheir texte): fichier en entré
+        """        
         self.fichier = fichier
-        self.nbDays = int()
-        self.listLibrairie = list()
+        self.nb_days = int()
+        self.list_librairie = list()
         self.lecture()
 
     def lecture(self):
+        """
+        Lecture du fichier
+        """        
         global listBook
         listBook = list()
-        listScore = list()
         f = open(self.fichier, encoding='utf8')
         ligne = f.readline().strip().split()
-        nbLib = int(ligne[1])
-        self.nbDays = int((ligne[2]))
-        listScore = f.readline().split()
-        for j in range(0, len(listScore)):
-            listBook.append(Book(j, listScore[j]))
-        for i in range(0, nbLib):
+        nb_lib = int(ligne[1])
+        self.nb_days = int((ligne[2]))
+        list_score = f.readline().split()
+        for j in range(0, len(list_score)):
+            listBook.append(Book(j, list_score[j]))
+        for i in range(0, nb_lib):
             i += 1
             ligne = f.readline().strip()
-            listBookLibrairie = f.readline().strip().split()
+            list_book_librairie = f.readline().strip().split()
             ligne = ligne.split()
-            self.listLibrairie .append(
-                Librairie(i, ligne[0], ligne[1], ligne[2], listBookLibrairie))
+            self.list_librairie .append(
+                Librairie(i, ligne[0], ligne[1], ligne[2], list_book_librairie))
 
 
 class Book():
-
+    """
+    Représentation des livres en classe
+    """    
     def __init__(self, num, score):
+        """
+        Initialisation de la classe
+
+        Args:
+            num (int): numéro du livre, ID
+            score (int): nombre de point du livre
+        """        
         self.num = int(num)
         self.score = int(score)
 
 
 class Librairie():
+    """
+    Représentation des librairie en classe
+    """    
 
-    def __init__(self, num, nbBook, shipTime, nbBookPerDay, listBookLibrairie):
-        self.nbBook = int(nbBook)
-        self.shipTime = int(shipTime)
-        self.nbBookPerDay = int(nbBookPerDay)
+    def __init__(self, num, nb_book, ship_time, nb_book_per_day, list_book_librairie):
+        """
+        Initialisation de la classe
+
+        Args:
+            num (int): numéro de la librairie, ID
+            nb_book (int): nombre de livre dans la librairie
+            ship_time (int): temps d'emprunt des livres
+            nb_book_per_day (int): nombre de livre emprunté par jour
+            list_book_librairie (list): liste des livres
+        """        
+        self.nb_book = int(nb_book)
+        self.ship_time = int(ship_time)
+        self.nb_book_per_day = int(nb_book_per_day)
         self.num = num-1
-        self.listBookLibrairie = list()
-        self.listBookScanned = list()
-        for livre in listBookLibrairie:
-            self.listBookLibrairie.append(listBook[int(livre)])
-        self.listBookLibrairie = sorted(
-            self.listBookLibrairie, key=lambda livre: livre.score, reverse=True)
-        self.calculRatio()
+        self.list_book_librairie = list()
+        self.list_book_scanned = list()
+        for livre in list_book_librairie:
+            self.list_book_librairie.append(listBook[int(livre)])
+        self.list_book_librairie = sorted(
+            self.list_book_librairie, key=lambda livre: livre.score, reverse=True)
+        self.calcul_ratio()
 
-    def calculRatio(self):
+    def calcul_ratio(self):
+        """
+        Ratio scrore des livres / jour d'emprunt
+        """        
         self.score = int()
         self.ratio = int()
-        for livre in self.listBookLibrairie:
+        for livre in self.list_book_librairie:
             self.score += livre.score
-        self.ratio = self.score / self.shipTime
+        self.ratio = self.score / self.ship_time
 
-    def update(self, listeBookout):
-        for livre in listeBookout:
+    def update(self, liste_book_out):
+        """
+        Mise à jour des attribut de la classe
+
+        Args:
+            liste_book_out (list): liste des livres empruntés
+        """        
+        for livre in liste_book_out:
             try:
-                self.listBookLibrairie.remove(livre)
+                self.list_book_librairie.remove(livre)
             except ValueError:
                 pass
-        self.nbBook = len(self.listBookLibrairie)
-        self.calculRatio()
+        self.nb_book = len(self.list_book_librairie)
+        self.calcul_ratio()
 
-    def scanned(self, day, nbDays):
+    def scanned(self, day, nb_days):
+        """
+        On commence à scanner les livres
+
+        Args:
+            day (int): jour que nous sommes
+            nb_days ([type]): nombre de jour restant
+
+        Returns:
+            list: liste des livre scanné
+        """        
         global scoreLib
-        dayScanne = self.nbBook // self.nbBookPerDay
-        if self.nbBook % self.nbBookPerDay != 0:
-            dayScanne += 1
-        if dayScanne + day <= nbDays:
-            self.listBookScanned = self.listBookLibrairie.copy()
+        day_scanne = self.nb_book // self.nb_book_per_day
+        if self.nb_book % self.nb_book_per_day != 0:
+            day_scanne += 1
+        if day_scanne + day <= nb_days:
+            self.list_book_scanned = self.list_book_librairie.copy()
         else:
-            for i in range(day, nbDays):
-                for j in range(0, self.nbBookPerDay):
-                    self.listBookScanned.append(self.listBookLibrairie[j])
-                self.update(self.listBookScanned)
-        for livre in self.listBookScanned:
+            for i in range(day, nb_days):
+                for j in range(0, self.nb_book_per_day):
+                    self.list_book_scanned.append(self.list_book_librairie[j])
+                self.update(self.list_book_scanned)
+        for livre in self.list_book_scanned:
             scoreLib += livre.score
-        return self.listBookScanned
+        return self.list_book_scanned
 
 
-def ecriture(fichier, listLibrairieOutput):
-    ligne = str()
+def ecriture(fichier, list_librairie_output):
+    """
+    Ecriture du fichier réponse
+
+    Args:
+        fichier (fichier texte): fichier de sorti
+        list_librairie_output (list): liste des livres scannés
+    """    
     f = open("Haschcode 2020\Output\\" + fichier[21:], "w")
-    f.write(str(len(listLibrairieOutput)) + "\n")
-    for librairie in listLibrairieOutput:
-        ligne = str(librairie.num) + " " + str(len(librairie.listBookScanned))
+    f.write(str(len(list_librairie_output)) + "\n")
+    for librairie in list_librairie_output:
+        ligne = str(librairie.num) + " " + str(len(librairie.list_book_scanned))
         f.write(ligne + "\n")
         ligne = str()
-        for livre in librairie.listBookScanned:
+        for livre in librairie.list_book_scanned:
             ligne += str(livre.num) + " "
         f.write(ligne + "\n")
 
 
-def progression(iteration, total=100, prefix='', suffix='', decimals=1, length=100, fill='█', printEnd="\r"):
+def progression(iteration, total=100, prefix='', suffix='', decimals=1, length=100, fill='█', print_end="\r"):
     """
     Appel en boucle pour créer une barre de progression du terminal
 
-    :param iteration: itération actuelle 
-    :type: int
-    :param total: total des itérations
-    :param prefix: chaîne de préfixe
-    :type: str
-    :param prefix: chaîne de suffix
-    :type: str
-    :param decimals: nombre positif de décimales en pourcentage d'achèvement (Int)
-    :type: int
-    :param length: longueur de caractères de la barre
-    :type: int
-    :param fill: caractère de remplissage de la barre
-    :type: str
-    :param printEnd: caractère de fin
-    :type: str
+    Args:
+        iteration (int): itération actuelle 
+        total (int, optional): total des itérations. Defaults to 100.
+        prefix (str, optional): chaîne de préfixe. Defaults to ''.
+        suffix (str, optional): chaîne de suffix. Defaults to ''.
+        decimals (int, optional): nombre positif de décimales en pourcentage d'achèvement. Defaults to 1.
+        length (int, optional): longueur de caractères de la barre. Defaults to 100.
+        fill (str, optional): caractère de remplissage de la barre. Defaults to '█'.
+        print_end (str, optional): caractère de fin. Defaults to "\r".
     """
     percent = ("{0:." + str(decimals) + "f}").format(100 *
                                                      (iteration / float(total)))
-    filledLength = int(length * iteration // total)
-    bar = fill * filledLength + '-' * (length - filledLength)
-    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end=printEnd)
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end=print_end)
     # Print New Line on Complete
     if iteration >= total:
         print()
 
 
 def initialisation(fichier):
+    """
+    Initialisation du traitement du fichier
+
+    Args:
+        fichier (fichier texte): fichier à traiter
+
+    Returns:
+        (scoreLib, temps): score de la librairie, temps restant
+    """    
     global scoreLib
     debut = time.time()
     lecture = Read(fichier)
-    listLibrairie = lecture.listLibrairie
-    nbDays = lecture.nbDays
+    list_librairie = lecture.list_librairie
+    nb_days = lecture.nb_days
     day = int()
     scoreLib = int()
-    listLibrairieOutput = list()
-    listeBookout = list()
+    list_librairie_output = list()
     print("Fichier: " + fichier[21:])
-    while day < nbDays and len(listLibrairie) > 0:
-        modele = "Score: {:,}"
-        progression(day, total=nbDays,
+    while day < nb_days and len(list_librairie) > 0:
+        progression(day, total=nb_days,
                     suffix="\tScore: {:n}".format(scoreLib), length=50)
-        listLibrairie = sorted(
-            listLibrairie, key=lambda librairie: librairie.ratio, reverse=True)
-        newLibrairie = listLibrairie[0]
-        day += newLibrairie.shipTime
-        listeBookout = newLibrairie.scanned(day, nbDays)
-        listLibrairie.remove(newLibrairie)
-        if len(newLibrairie.listBookScanned) > 0:
-            listLibrairieOutput.append(newLibrairie)
-        for librairie in listLibrairie:
-            librairie.update(listeBookout)
-    progression(nbDays, total=nbDays, length=50, suffix=" " *
+        list_librairie = sorted(
+            list_librairie, key=lambda librairie: librairie.ratio, reverse=True)
+        new_librairie = list_librairie[0]
+        day += new_librairie.ship_time
+        liste_book_out = new_librairie.scanned(day, nb_days)
+        list_librairie.remove(new_librairie)
+        if len(new_librairie.list_book_scanned) > 0:
+            list_librairie_output.append(new_librairie)
+        for librairie in list_librairie:
+            librairie.update(liste_book_out)
+    progression(nb_days, total=nb_days, length=50, suffix=" " *
                 len("  \tScore: {:n}".format(scoreLib)))
-    ecriture(fichier, listLibrairieOutput)
+    ecriture(fichier, list_librairie_output)
     temps = time.time() - debut
     print("Score: {:n}".format(scoreLib))
     print("Temps:", time.strftime("%Hh %Mmin %Ss", time.gmtime(temps)))
