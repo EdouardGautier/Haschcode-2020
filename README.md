@@ -54,7 +54,7 @@ e_so_many_books.txt | 100 000 | 1 000 | 200 | 4 593 379 | 00h 02min 43s
 f_libraries_of_the_world.txt | 100 000 | 1 000 | 700 | 5 208 176 | 00h 01min 25s
 **Total** | **478 606** | **42 102** | **131 908** | **26 342 308** | **00h 34min 38s**
 
-The calculated score is confirmed by the [Judge System of the HashCode](images/Score google.png).
+The calculated score is confirmed by the [Judge System of the HashCode](images/Score_google.png).
 
 ### Limits ⚠️
 - No unit test
